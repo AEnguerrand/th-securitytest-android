@@ -1,7 +1,12 @@
-#include <iostream>
+
+#include "searchPath.hh"
 
 int main(int, char **)
 {
-  std::cout << "Hello world" << std::endl;
+  thsa::searchPath paths;
+
+  paths.allPath();
+  paths.printAllPath();
+
   return (1);
 }
