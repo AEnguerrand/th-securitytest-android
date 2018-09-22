@@ -55,13 +55,14 @@ void thsa::searchPath::printAllPath(void)
 
 int thsa::searchPath::ifInvalidPath(std::vector<int> path)
 {
+  static bool found;
   for (auto i = path.begin(); (i + 1) != path.end(); i++)
     {
       for (auto a = _invalidPath.begin(); a != _invalidPath.end(); a++)
 	{
 	  if (*i == a->at(0) && *(i + 1) == a->at(1))
 	    {
-	      bool found = false;
+	      found = false;
 	      for (auto u = path.begin(); u != i; u++)
 		{
 		  if (*u == a->at(2))

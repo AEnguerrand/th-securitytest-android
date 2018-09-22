@@ -10,7 +10,7 @@ namespace thsa
   class searchPath
   {
    private:
-    long long _numberPath;
+    long int _numberPath;
     /**
      * @details
      * array description:
