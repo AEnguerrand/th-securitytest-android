@@ -23,7 +23,7 @@ int thsa::searchPath::allPath(void)
   return 0;
 }
 
-void thsa::searchPath::searchOnePath(std::vector<int> path, int depth)
+void thsa::searchPath::searchOnePath(const std::vector<int> &path, int depth)
 {
   depth -= 1;
   if (depth > 0)
@@ -53,7 +53,7 @@ void thsa::searchPath::printAllPath(void)
   std::cout << "Paths numbers: " << _numberPath << std::endl;
 }
 
-int thsa::searchPath::ifInvalidPath(std::vector<int> path)
+int thsa::searchPath::ifInvalidPath(const std::vector<int> &path)
 {
   static bool found;
   for (auto i = path.begin(); (i + 1) != path.end(); i++)

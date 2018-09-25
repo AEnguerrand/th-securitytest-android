@@ -45,9 +45,9 @@ namespace thsa
     void printAllPath();
 
    private:
-    void searchOnePath(std::vector<int> path, int depth);
+    void searchOnePath(const std::vector<int> &path, int depth);
 
-    int ifInvalidPath(std::vector<int> path);
+    int ifInvalidPath(const std::vector<int> &path);
   };
 }
 
