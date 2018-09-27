@@ -6,6 +6,7 @@ Tsinghua project - Test max possibility for android path lock
 ```bash
 git clone https://github.com/AEnguerrand/th-securitytest-android.git
 cd th-securitytest-android
+mkdir build
 cd build
 cmake ..
 cmake --build .
