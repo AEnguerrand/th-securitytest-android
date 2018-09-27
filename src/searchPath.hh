@@ -10,7 +10,6 @@ namespace thsa
   class searchPath
   {
    private:
-    long int _numberPath;
     /**
      * @details
      * array description:
@@ -35,19 +34,21 @@ namespace thsa
 	    {3, 9, 4},
 	    {9, 3, 4}
     };
+
+    std::vector<long int> _numberPathForEachSize;
    public:
     searchPath();
 
-    ~searchPath();
-
     int allPath();
 
-    void printAllPath();
+    void printAllPath() const;
 
    private:
     void searchOnePath(const std::vector<int> &path, int depth);
 
-    int ifInvalidPath(const std::vector<int> &path);
+    int ifInvalidPath(const std::vector<int> &path) const;
+
+    void printNumberForOne(int number) const;
   };
 }
 

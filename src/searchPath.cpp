@@ -1,16 +1,14 @@
 #include "searchPath.hh"
 
-thsa::searchPath::searchPath() :
-	_numberPath(0)
+thsa::searchPath::searchPath()
 {
+  for (auto i = 0; i <= 5; i++)
+    {
+      _numberPathForEachSize.push_back(0);
+    }
 }
 
-thsa::searchPath::~searchPath()
-{
-
-}
-
-int thsa::searchPath::allPath(void)
+int thsa::searchPath::allPath()
 {
   for (auto i = 4; i <= 9; i++)
     {
@@ -43,17 +41,21 @@ void thsa::searchPath::searchOnePath(const std::vector<int> &path, int depth)
     {
       if (ifInvalidPath(path) == 0)
 	{
-	  _numberPath += 1;
+	  _numberPathForEachSize.at(path.size() - 4) += 1;
 	}
     }
 }
 
-void thsa::searchPath::printAllPath(void)
+
+void thsa::searchPath::printAllPath() const
 {
-  std::cout << "Paths numbers: " << _numberPath << std::endl;
+  for (auto i = 4; i <= 9; i++)
+    {
+      printNumberForOne(i);
+    }
 }
 
-int thsa::searchPath::ifInvalidPath(const std::vector<int> &path)
+int thsa::searchPath::ifInvalidPath(const std::vector<int> &path) const
 {
   static bool found;
   for (auto i = path.begin(); (i + 1) != path.end(); i++)
@@ -74,4 +76,14 @@ int thsa::searchPath::ifInvalidPath(const std::vector<int> &path)
 	}
     }
   return (0);
+}
+
+void thsa::searchPath::printNumberForOne(int number) const
+{
+  long int numberPoss = 0;
+  for (auto i = 0; i <= (number - 4); i++)
+    {
+      numberPoss += _numberPathForEachSize.at(i);
+    };
+  std::cout << "Paths numbers with minimal " << number << " nodes use : " << numberPoss << std::endl;
 }
