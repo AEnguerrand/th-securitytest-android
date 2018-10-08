@@ -23,6 +23,8 @@ int thsa::searchPath::allPath()
 
 void thsa::searchPath::searchOnePath(const std::vector<int> &path, int depth)
 {
+  if (ifInvalidPath(path) != 0)
+    return;
   depth -= 1;
   if (depth > 0)
     {
