@@ -1,6 +1,7 @@
 #ifndef TH_SECURITYTEST_ANDROID_SEARCHPATH_HH
 #define TH_SECURITYTEST_ANDROID_SEARCHPATH_HH
 
+#include <algorithm>
 #include <vector>
 #include <array>
 #include <iostream>

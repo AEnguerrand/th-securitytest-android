@@ -28,7 +28,7 @@ void thsa::searchPath::searchOnePath(const std::vector<int> &path, int depth)
   depth -= 1;
   if (depth > 0)
     {
-      for (auto a = 1; a <= 9; a++)
+      for (int a = 1; a <= 9; a++)
 	{
 	  if (std::find(path.begin(), path.end(), a) == path.end())
 	    {
