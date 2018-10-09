@@ -41,10 +41,7 @@ void thsa::searchPath::searchOnePath(const std::vector<int> &path, int depth)
     }
   else
     {
-      if (ifInvalidPath(path) == 0)
-	{
-	  _numberPathForEachSize.at(path.size() - 4) += 1;
-	}
+      _numberPathForEachSize.at(path.size() - 4) += 1;
     }
 }
 
