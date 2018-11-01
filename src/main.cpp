@@ -7,6 +7,5 @@ int main(int, char **)
 
   paths.allPath();
   paths.printAllPath();
-
-  return (1);
+  return (0);
 }
