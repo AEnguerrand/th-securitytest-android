@@ -3,8 +3,8 @@ Tsinghua project - Test max possibility for android path lock
 
 ## Dependencies
 
-C++ 14 Compiler
-CMake (>= 3.9)
+- C++ 14 Compiler
+- CMake (>= 3.9)
 
 ## Build and run
 ### Linux or MacOs
