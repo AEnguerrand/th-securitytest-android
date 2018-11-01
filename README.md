@@ -1,4 +1,8 @@
 # th-securitytest-android
+[![Build Status](https://www.travis-ci.com/AEnguerrand/th-securitytest-android.svg?branch=master)](https://www.travis-ci.com/AEnguerrand/th-securitytest-android)
+![CPP](https://img.shields.io/badge/C++-14-blue.svg)
+
+
 Tsinghua project - Test max possibility for android path lock
 
 ## Dependencies
